@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Novembro Azul - Conscientização e Saúde do Homem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Cabeçalho da Campanha -->
+    <header class="header-campanha">
+        <div class="logo-container">
+            <span class="icone-laco">🎗️</span>
+            <h1>Novembro Azul</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="#indicadores">Indicadores</a>
+            <a href="#agendamentos">Agendamentos</a>
+            <a href="#prevencao">Cuidados & Prevenção</a>
+            <a href="#formulario">Pré-Agendamento</a>
+        </nav>
+    </header>
+
+    <main class="container-principal">
+        
+        <!-- 2. Painel de Indicadores de Saúde (Divs) -->
+        <section id="indicadores" class="painel-indicadores">
+            <div class="card-metrica">
+                <h3>Homens Diagnosticados</h3>
+                <p class="valor">68.220</p>
+                <p class="descricao">Novos casos estimados por ano no Brasil.</p>
+            </div>
+            <div class="card-metrica">
+                <h3>Chance de Cura Precoce</h3>
+                <p class="valor">90%</p>
+                <p class="descricao">Quando diagnosticado nos estágios iniciais.</p>
+            </div>
+            <div class="card-metrica">
+                <h3>Exames Realizados</h3>
+                <p class="valor">+1,5M</p>
+                <p class="descricao">Testes de PSA e consultas preventivas anuais.</p>
+            </div>
+            <div class="card-metrica">
+                <h3>Unidades de Atendimento</h3>
+                <p class="valor">4.200</p>
+                <p class="descricao">Pontos de apoio especializados na rede pública.</p>
+            </div>
+        </section>
+
+        <!-- 3. Tabela de Agendamento & Triagem (Tabelas HTML com colspan e rowspan) -->
+        <section id="agendamentos" class="secao-tabela">
+            <h2>Agenda de Triagem e Consultas Preventivas</h2>
+            <div class="table-responsive">
+                <table class="tabela-triagem">
+                    <thead>
+                        <tr>
+                            <th>Paciente</th>
+                            <th>Idade</th>
+                            <th>Tipo de Exame / Consulta</th>
+                            <th>Unidade Médica</th>
+                            <th>Data e Hora</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Carlos Alberto Silva</td>
+                            <td rowspan="2">54</td>
+                            <td>Consulta Urológica Geral</td>
+                            <td>UBS Central - Sala 03</td>
+                            <td>12/11/2026 - 08:30</td>
+                            <td><span class="badge realizado">Realizado</span></td>
+                        </tr>
+                        <tr>
+                            <td>Coleta de Sangue (PSA Total e Livre)</td>
+                            <td>Laboratório Municipal</td>
+                            <td>12/11/2026 - 09:15</td>
+                            <td><span class="badge realizado">Realizado</span></td>
+                        </tr>
+                        <tr>
+                            <td>Antônio José Souza</td>
+                            <td>61</td>
+                            <td>Toque Retal & Avaliação de Rotina</td>
+                            <td>UBS Norte - Consultório 02</td>
+                            <td>14/11/2026 - 10:00</td>
+                            <td><span class="badge agendado">Agendado</span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Mutirão Especial de Saúde do Homem</td>
+                            <td>Triagem Completa (PSA + Clínico)</td>
+                            <td>Hospital Regional - Ala B</td>
+                            <td>15/11/2026 - 07:00 às 13:00</td>
+                            <td><span class="badge urgente">Urgente</span></td>
+                        </tr>
+                        <tr>
+                            <td>Marcos Vinícius Lima</td>
+                            <td>48</td>
+                            <td>Consulta Urológica Preventiva</td>
+                            <td>UBS Sul - Sala 01</td>
+                            <td>16/11/2026 - 14:00</td>
+                            <td><span class="badge agendado">Agendado</span></td>
+                        </tr>
+                        <tr>
+                            <td>Roberto Carlos Mendes</td>
+                            <td>58</td>
+                            <td>Retorno de Exames (PSA)</td>
+                            <td>Centro de Especialidades</td>
+                            <td>18/11/2026 - 11:30</td>
+                            <td><span class="badge agendado">Agendado</span></td>
+                        </tr>
+                        <tr>
+                            <td>João Batista Oliveira</td>
+                            <td>65</td>
+                            <td>Avaliação Urológica Completa</td>
+                            <td>UBS Leste - Sala 04</td>
+                            <td>20/11/2026 - 15:00</td>
+                            <td><span class="badge agendado">Agendado</span></td>
+                        </tr>
+                        <tr>
+                            <td>Fernando Augusto Costa</td>
+                            <td>50</td>
+                            <td>Triagem Inicial e Orientação</td>
+                            <td>UBS Oeste - Sala 02</td>
+                            <td>22/11/2026 - 09:00</td>
+                            <td><span class="badge urgente">Urgente</span></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">Total de Atendimentos Previstos na Semana:</td>
+                            <td><strong>8 Pacientes</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <!-- 5. Seção de Cuidados & Prevenção (Divs) -->
+        <section id="prevencao" class="secao-cuidados">
+            <h2>Cuidados & Prevenção Essenciais</h2>
+            <div class="grid-cuidados">
+                <div class="card-cuidado">
+                    <h3>Exame de PSA</h3>
+                    <p>O antígeno prostático específico (PSA) é um exame de sangue simples que mede os níveis da proteína produzida pela próstata, auxiliando na detecção precoce de alterações.</p>
+                </div>
+                <div class="card-cuidado">
+                    <h3>Toque Retal</h3>
+                    <p>Avalia rapidamente o tamanho, a forma e a textura da próstata. É um procedimento seguro, indolor e fundamental que complementa o exame de sangue.</p>
+                </div>
+                <div class="card-cuidado">
+                    <h3>Hábitos Saudáveis</h3>
+                    <p>Praticar atividades físicas regularmente, manter uma alimentação equilibrada rica em frutas e vegetais, e evitar o consumo excessivo de álcool e tabaco.</p>
+                </div>
+                <div class="card-cuidado">
+                    <h3>Diagnóstico Precoce</h3>
+                    <p>A detecção precoce do cancro da próstata eleva as taxas de sucesso do tratamento para mais de 90%. Homens a partir dos 45 anos com histórico familiar devem consultar o urologista anualmente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Formulário/Card de Agendamento -->
+        <section id="formulario" class="secao-formulario">
+            <div class="card-formulario">
+                <h2>Pré-Agendamento de Consulta Preventiva</h2>
+                <p>Preencha os campos abaixo para solicitar o seu agendamento na unidade de saúde mais próxima.</p>
+                <form>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="idade">Idade:</label>
+                        <input type="number" id="idade" name="idade" placeholder="Sua idade" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="unidade">Unidade de Saúde:</label>
+                        <select id="unidade" name="unidade">
+                            <option value="central">UBS Central</option>
+                            <option value="norte">UBS Norte</option>
+                            <option value="sul">UBS Sul</option>
+                            <option value="leste">UBS Leste</option>
+                            <option value="oeste">UBS Oeste</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-enviar">Solicitar Agendamento</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 7. Rodapé da Campanha -->
+    <footer class="footer-campanha">
+        <p>&copy; 2026 Portal Novembro Azul. Todos os direitos reservados. Juntos pela conscientização e saúde integral do homem.</p>
+        <p>Prevenção é o melhor remédio.</p>
+    </footer>
+
+</body>
+</html>
