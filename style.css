@@ -1,0 +1,304 @@
+
+:root {
+    --azul-escuro: #0a2540;
+    --azul-medio: #1d3557;
+    --azul-claro: #457b9d;
+    --azul-destaque: #0077b6;
+    --amarelo-laco: #e9c46a;
+    --fundo-pagina: #f4f6f9;
+    --branco: #ffffff;
+    --cinza-texto: #333333;
+    --borda-tabela: #cbd5e1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--fundo-pagina);
+    color: var(--cinza-texto);
+    line-height: 1.6;
+}
+
+
+.header-campanha {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.icone-laco {
+    font-size: 1.8rem;
+}
+
+.header-campanha h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--amarelo-laco);
+}
+
+.container-principal {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.painel-indicadores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.card-metrica {
+    background-color: var(--branco);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid var(--azul-destaque);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-metrica:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-metrica h3 {
+    font-size: 1.1rem;
+    color: var(--azul-medio);
+    margin-bottom: 0.5rem;
+}
+
+.card-metrica .valor {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--azul-destaque);
+    margin-bottom: 0.5rem;
+}
+
+.card-metrica .descricao {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.secao-tabela h2,
+.secao-cuidados h2 {
+    font-size: 1.8rem;
+    color: var(--azul-escuro);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.tabela-triagem {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--branco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tabela-triagem th,
+.tabela-triagem td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--borda-tabela);
+}
+
+.tabela-triagem thead {
+    background-color: var(--azul-medio);
+    color: var(--branco);
+}
+
+.tabela-triagem tfoot {
+    background-color: #e2e8f0;
+    font-weight: bold;
+}
+
+
+.tabela-triagem tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+
+.tabela-triagem tbody tr:hover {
+    background-color: #edf2f7;
+}
+
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.badge.realizado {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.badge.agendado {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.badge.urgente {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* 5. Seção de Cuidados & Prevenção (Divs) */
+.grid-cuidados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.card-cuidado {
+    background-color: var(--branco);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid var(--amarelo-laco);
+    transition: transform 0.3s ease;
+}
+
+.card-cuidado:hover {
+    transform: translateY(-3px);
+}
+
+.card-cuidado h3 {
+    color: var(--azul-escuro);
+    margin-bottom: 0.75rem;
+}
+
+.card-cuidado p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* 6. Formulário/Card de Agendamento */
+.secao-formulario {
+    display: flex;
+    justify-content: center;
+}
+
+.card-formulario {
+    background-color: var(--branco);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 600px;
+    border-top: 4px solid var(--azul-destaque);
+}
+
+.card-formulario h2 {
+    color: var(--azul-escuro);
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.card-formulario p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--azul-medio);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--borda-tabela);
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--azul-destaque);
+}
+
+.btn-enviar {
+    background-color: var(--azul-destaque);
+    color: var(--branco);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: var(--azul-medio);
+}
+
+.footer-campanha {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
